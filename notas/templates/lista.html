@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Notas</title>
+    <link rel="stylesheet" href="{% static 'lista.css' %}">
+</head>
+<body>
+    <header>
+        <h1>Mis Notas</h1>
+        <a class="boton-crear" href="{% url 'notas:crear_nota' %}">+ Crear nueva nota</a>
+    </header>
+
+    <main>
+        {% if notas %}
+            <ul class="lista-notas">
+                {% for nota in notas %}
+                    <li class="nota">
+                        <a href="{% url 'notas:detalle_nota' nota.id %}">
+                            <h2>{{ nota.titulo }}</h2>
+                        </a>
+                        <p class="fecha">Creada el {{ nota.fecha_de_creacion|date:"d/m/Y H:i" }}</p>
+                    </li>
+                {% endfor %}
+            </ul>
+        {% else %}
+            <p class="sin-notas">No hay notas aún. Crea una nueva para comenzar.</p>
+        {% endif %}
+    </main>
+</body>
+</html>

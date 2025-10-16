@@ -1,0 +1,57 @@
+body {
+    font-family: Arial, sans-serif;
+    background: #f4f4f9;
+    margin: 0;
+    padding: 20px;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+h1 {
+    color: #333;
+}
+
+.boton-crear {
+    text-decoration: none;
+    background: #008cba;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 6px;
+}
+
+.boton-crear:hover {
+    background: #0079a4;
+}
+
+.lista-notas {
+    list-style: none;
+    padding: 0;
+    margin-top: 20px;
+}
+
+.nota {
+    background: white;
+    border-radius: 8px;
+    padding: 15px;
+    margin-bottom: 10px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.nota h2 {
+    margin: 0;
+    color: #333;
+}
+
+.fecha {
+    color: gray;
+    font-size: 0.9em;
+}
+
+.sin-notas {
+    text-align: center;
+    color: #555;
+}

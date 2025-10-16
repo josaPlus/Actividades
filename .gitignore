@@ -1,0 +1,23 @@
+# Archivos de caché de Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+
+# Base de datos local
+db.sqlite3
+
+# Archivos temporales de VSCode o IDEs
+.vscode/
+.idea/
+
+# Archivos del sistema operativo
+.DS_Store
+Thumbs.db
+
+# Archivos de logs
+*.log
+
+# Archivos compilados o temporales
+*.tmp
+*.bak

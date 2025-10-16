@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ nota.titulo }}</title>
+    <link rel="stylesheet" href="{% static 'detalle.css' %}">
+</head>
+<body>
+    <article class="nota">
+        <h1>{{ nota.titulo }}</h1>
+        <p class="contenido">{{ nota.contenido }}</p>
+        <p class="fecha">Creada el {{ nota.fecha_de_creacion|date:"d/m/Y H:i" }}</p>
+
+        <div class="acciones">
+            <a class="editar" href="{% url 'notas:editar_nota' nota.id %}">✏️ Editar</a>
+            <a class="eliminar" href="{% url 'notas:eliminar_nota' nota.id %}">🗑️ Eliminar</a>
+            <a class="volver" href="{% url 'notas:lista_notas' %}">⬅️ Volver</a>
+        </div>
+    </article>
+</body>
+</html>

@@ -1,0 +1,51 @@
+body {
+    font-family: Arial, sans-serif;
+    background: #f2f2f2;
+    margin: 0;
+    padding: 20px;
+}
+
+.nota {
+    background: white;
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.1);
+}
+
+h1 {
+    color: #333;
+}
+
+.contenido {
+    margin-top: 15px;
+    white-space: pre-wrap;
+}
+
+.fecha {
+    margin-top: 10px;
+    color: gray;
+    font-size: 0.9em;
+}
+
+.acciones {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.acciones a {
+    text-decoration: none;
+    padding: 8px 12px;
+    border-radius: 6px;
+    color: white;
+}
+
+.editar { background: #0079a4; }
+.eliminar { background: #d9534f; }
+.volver { background: #777; }
+
+.acciones a:hover {
+    opacity: 0.9;
+}

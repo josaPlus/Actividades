@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{accion}}</title>
+    <link rel="stylesheet" href="{% static 'formulario.css' %}">
+</head>
+<body>
+    <div class="contenedor">
+        <form method="post" action="">
+            {% csrf_token %}
+            <fieldset>
+                <legend>
+                    <h1>{{ accion|title }} Nota</h1>
+                </legend>
+
+                {% if form.errors %}
+                    <p class="error"><strong>Por favor corrige los errores indicados.</strong></p>
+                {% endif %}
+
+                <p>
+                    <label for="id_titulo">Título:</label>
+                    <input type="text" name="titulo" id="id_titulo" maxlength="200" 
+                           value="{{ form.titulo.value|default:'' }}">
+                </p>
+
+                <p>
+                    <label for="id_contenido">Contenido:</label>
+                    <textarea name="contenido" id="id_contenido">{{ form.contenido.value|default:'' }}</textarea>
+                </p>
+
+                <button type="submit">Guardar</button>
+            </fieldset>
+
+            <a class="volver" href="{% url 'notas:lista_notas' %}">⬅️ Volver</a>
+        </form>
+    </div>
+</body>
+</html>
