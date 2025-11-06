@@ -21,3 +21,6 @@ Thumbs.db
 # Archivos compilados o temporales
 *.tmp
 *.bak
+
+# usuarios txt en la carpeta notas
+notas/usuarios.txt

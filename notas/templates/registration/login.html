@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inicio de sesión</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'login.css' %}">
+</head>
+<body>
+    <h2>Ingrese sus datos para responder las preguntas</h2>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">
+            Iniciar sesión
+        </button>
+    </form>
+    {% if form.errors %}
+        <p>El usuario o la contraseña son incorrectos, intente de nuevo.</p>
+    {% endif %}
+</body>
+</html>

@@ -28,6 +28,13 @@
         {% else %}
             <p class="sin-notas">No hay notas aún. Crea una nueva para comenzar.</p>
         {% endif %}
+        
+        <form action="{% url 'logout' %}" method="post">
+            {% csrf_token %}
+            <button type="submit" style="border: none; background: none; padding: 0; color: blue; text-decoration: underline;">
+                Cerrar sesión
+            </button>
+        </form>
     </main>
 </body>
 </html>
